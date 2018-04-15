@@ -9,8 +9,6 @@ import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapred.Mapper;
 
 import java.io.IOException;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Query3Mapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
 
@@ -20,34 +18,22 @@ public class Query3Mapper extends MapReduceBase implements Mapper<LongWritable, 
 
     public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
         String[] line = value.toString().split(",");
-        if (line[0].equals("Year")) {
+        if (line[0].equals("Year") || line[18].equals("NA") || line[15].equals("NA") || line[14].equals("NA")) {
 
-        }
-        else if (line[18].equals("NA")) {
-
-        }
-
-        else if (line[15].equals("NA")) {
-
-        }
-
-        else if (line[14].equals("NA")) {
-
-        }
-
-        else if (((Integer.parseInt(line[15]) / 2) < Integer.parseInt(line[14])) && (Integer.parseInt(line[15]) > 0))  {
-            int distanceGroupInt = (Integer.parseInt(line[18]) / 200) + 1;
-            String distanceGroupString = Integer.toString(distanceGroupInt);
-            distanceGroup.set(distanceGroupString);
-            output.collect(distanceGroup, one);
         }
 
         else {
             int distanceGroupInt = (Integer.parseInt(line[18]) / 200) + 1;
             String distanceGroupString = Integer.toString(distanceGroupInt);
             distanceGroup.set(distanceGroupString);
-            output.collect(distanceGroup, zero);
-        }
 
+            if (((Integer.parseInt(line[15]) / 2) >= Integer.parseInt(line[14])) && (Integer.parseInt(line[15]) > 0)) {
+
+                output.collect(distanceGroup, one);
+            } else {
+
+                output.collect(distanceGroup, zero);
+            }
+        }
     }
 }
