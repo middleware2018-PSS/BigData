@@ -1,6 +1,7 @@
 BDdata/*.csv
 .ipynb_checkpoints/*
 _SUCCESS
+miniconda3
 
 BDdata/\.ipynb_checkpoints/airports-checkpoint\.csv
 
