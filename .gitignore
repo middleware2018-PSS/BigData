@@ -6,3 +6,5 @@ miniconda3
 BDdata/\.ipynb_checkpoints/airports-checkpoint\.csv
 
 BDdata/\.ipynb_checkpoints/Untitled-checkpoint\.ipynb
+
+*.crc
