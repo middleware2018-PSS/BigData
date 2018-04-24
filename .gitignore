@@ -8,3 +8,11 @@ BDdata/\.ipynb_checkpoints/airports-checkpoint\.csv
 BDdata/\.ipynb_checkpoints/Untitled-checkpoint\.ipynb
 
 *.crc
+
+query4\.csv/extra/\.ipynb_checkpoints/
+
+query3\.csv/\.ipynb_checkpoints/
+
+query3\.csv/extra/\.ipynb_checkpoints/
+
+query4\.csv/\.ipynb_checkpoints/
