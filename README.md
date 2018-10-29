@@ -2,7 +2,7 @@
 
 click here to see the plots -> [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/middleware2018-PSS/BigData/master?filepath=plots.ipynb)
 
-### Queries
+## Queries
 
 
 1. The percentage of canceled flights per day, throughout the entire data set
@@ -11,7 +11,7 @@ click here to see the plots -> [![Binder](https://mybinder.org/badge.svg)](https
 4. A weekly "penalty" score for each airport that depends on both the its incoming and outgoing flights. The score adds 0.5 for each incoming flight that is more than 15 minutes late, and 1 for each outgoing flight that is more than 15 minutes late.
 
 
-### Spark
+## Spark
 Docker container used to run Spark can be spawned by running:
 ```
 docker run -it --name=spark-notebook -p 8888:8888 -v PATH/TO/REPO:/home/jovyan/work jupyter/all-spark-notebook
@@ -28,6 +28,21 @@ All the spark code can be found in [here](spark):
     - `query-extra-N.csv/`: contain the correspondent query results for some extra query we have performed
     - `extraQuery/` contains the result for the extra query we have decided to keep as extra query
 
-### Plots
-Some of the plots are interactive and they are not supported by GitHub, click on the Binder badge to view the Jupyter Notebook with all the plots. Some of them are not displayed automatically the first time, in order to load all plots, click on the first cell (the cell with all the imports), run the cell with `Ctrl+Enter` and
-then run all the other cells clicking on `Cell -> Run All Below`.
+## Plots
+**To access the plots, click [here](https://middleware2018-pss.github.io/plots.html)**  
+
+The query visualizations were created in a **Jupyter Notebook** using different libraries managed by **Conda**: 
+- [Pandas](https://pandas.pydata.org/)
+- [Bokeh](https://bokeh.pydata.org/)
+- [Seaborn](https://seaborn.pydata.org/)
+- [Holoviews](http://holoviews.org/)
+- [GeoViews](http://geo.holoviews.org/)
+- [Cartopy](https://scitools.org.uk/cartopy)
+
+Due to the fact that some of the plots are interactive, they cannot be
+visualized directly on GitHub or using Nbviewer.
+For this reason we provide a self-contained HTML with all the plots, their description
+and a button to show/hide code snippets.
+When writing plots descriptions we tried not only to explain the query, but also
+to make clear why we choose a particular visualization and how it can be related
+to other plots.
