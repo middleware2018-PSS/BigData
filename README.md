@@ -1,6 +1,6 @@
 # BigData
 
-click here to see the plots -> [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/middleware2018-PSS/BigData/master?filepath=plots.ipynb)
+**Click here to see the plots:** [![Plots](https://img.shields.io/badge/click-plots-green.svg)](https://middleware2018-pss.github.io/plots.html)
 
 ## Queries
 
@@ -29,7 +29,7 @@ All the spark code can be found in [here](spark):
     - `extraQuery/` contains the result for the extra query we have decided to keep as extra query
 
 ## Plots
-**To access the plots, click [here](https://middleware2018-pss.github.io/plots.html)**  
+**Click here to see the plots:** [![Plots](https://img.shields.io/badge/click-plots-green.svg)](https://middleware2018-pss.github.io/plots.html)
 
 The query visualizations were created in a **Jupyter Notebook** using different libraries managed by **Conda**: 
 - [Pandas](https://pandas.pydata.org/)
