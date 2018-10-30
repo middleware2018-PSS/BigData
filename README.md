@@ -33,7 +33,9 @@ We implemented the queries using the Apache Hadoop framework, configured on pseu
 In every query both keys and values classes have been chosen to reduce the total execution time in the given enviroment. 
 
 All the Hadoop code can be found in [here](BDHadoop).
+
 The single queries code:
+
     - [Query 1](BDHadoop/src/Query1)
     - [Query 2](BDHadoop/src/Query2)
     - [Query 3](BDHadoop/src/Query3)
