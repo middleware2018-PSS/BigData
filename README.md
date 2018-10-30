@@ -27,6 +27,20 @@ All the spark code can be found in [here](spark):
     - `queryN.csv/`: contain the correspondent query results for the assigned queries
     - `query-extra-N.csv/`: contain the correspondent query results for some extra query we have performed
     - `extraQuery/` contains the result for the extra query we have decided to keep as extra query
+    
+## Hadoop
+We implemented the queries using the Apache Hadoop framework, configured on pseudo-distributed mode, on Java. 
+In every query both keys and values classes have been chosen to reduce the total execution time in the given enviroment. 
+
+All the Hadoop code can be found in [here](BDHadoop).
+The single queries code:
+    - [Query 1](BDHadoop/src/Query1)
+    - [Query 2](BDHadoop/src/Query2)
+    - [Query 3](BDHadoop/src/Query3)
+    - [Query 4](BDHadoop/src/Query4)
+    - [Query 5](BDHadoop/src/Query5)
+    - [Query 6](BDHadoop/src/Query6)
+    - [Query 6b](BDHadoop/src/Query6b)
 
 ## Plots
 **Click here to see the plots:** [![Plots](https://img.shields.io/badge/click-plots-green.svg)](https://middleware2018-pss.github.io/plots.html)
