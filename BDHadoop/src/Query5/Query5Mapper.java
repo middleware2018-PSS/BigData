@@ -16,13 +16,17 @@ public class Query5Mapper extends MapReduceBase implements Mapper<LongWritable, 
     private IntWritable one = new IntWritable(1);
 
     public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
-        String[] line = value.toString().split(",");
-        if (line[0].equals("Year") || line[0].equals("NA") || line[16].equals("NA") || line[17].equals("NA")) {
 
-        }
-        else{
+        String[] line = value.toString().split(",");
+
+        if not (line[0].equals("Year") || line[0].equals("NA") || line[16].equals("NA") || line[17].equals("NA")) {
+
             yearOriginDest.set("Year: " + line[0] + " Origin: " + line[16] + " Destination: " + line[17]);
             output.collect(yearOriginDest, one);
+
         }
+
+
     }
+
 }

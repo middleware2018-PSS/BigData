@@ -17,13 +17,13 @@ public class Query6Mapper extends MapReduceBase implements Mapper<LongWritable, 
 
     public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
         String[] line = value.toString().split(",");
-        if (line[0].equals("Year") || line[0].equals("NA") || line[16].equals("NA") || line[20].equals("NA")) {
+        if not (line[0].equals("Year") || line[0].equals("NA") || line[16].equals("NA") || line[20].equals("NA")) {
 
-        }
-        else{
             yearOrigin.set("Year: " + line[0] + " Origin: " + line[16]);
             taxiOut.set(Integer.parseInt(line[20]));
             output.collect(yearOrigin, taxiOut);
+
         }
+
     }
 }
