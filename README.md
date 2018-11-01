@@ -65,3 +65,6 @@ and a button to show/hide code snippets.
 When writing plots descriptions we tried not only to explain the query, but also
 to make clear why we choose a particular visualization and how it can be related
 to other plots.
+
+## N.B.
+Due to the different implementation of calendar libraries in Java and Python (respectively: https://docs.python.org/2/library/datetime.html and https://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html) the results of the queries 2,4,5,6 are slightly different.
